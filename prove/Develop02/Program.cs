@@ -27,6 +27,7 @@ while (useranswer != "5")
     //When user press 1 the program will call the Prompt Generator and will display the prompt
     if (useranswer == "1")
     {
+        //Asking the user for his/her name
         Console.WriteLine("What is your name?");
         userName = Console.ReadLine();
 
