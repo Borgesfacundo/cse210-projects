@@ -36,7 +36,8 @@ class Journal
 
             entry._dateText = parts[0];
             entry._prompt = parts[1];
-            entry._response = parts[2];
+            entry._name = parts[2];
+            entry._response = parts[3];
             //put all in a string
             AddEntry(entry);
             //entry.GetDisplayString();

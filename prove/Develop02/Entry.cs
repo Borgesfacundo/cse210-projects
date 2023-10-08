@@ -9,22 +9,21 @@ class Entry
     public string _response = "";
 
     public string _dateText = "";
+
+    public string _name = "0";
     
     
     public string GetDisplayString()
     {
-
-        //This string will be used to save the string in a file
-       // string journalSave = $"{_dateText}, Prompt: {_prompt}, {_response},";
         //this will be displayed
-        string journalEntry = $"{_dateText} Prompt: {_prompt} {_response}";
+        string journalEntry = $"{_dateText} Prompt: {_prompt} \n{_name}: {_response}";
        
         return journalEntry;
     }
 
     public string GetSaveText()
     {
-        return $"{_dateText},{_prompt},{_response}";
+        return $"{_dateText},{_prompt},{_name},{_response}";
     }
     //public override string ToString()
     //{

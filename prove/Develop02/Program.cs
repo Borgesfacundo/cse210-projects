@@ -5,6 +5,7 @@ using System;
 DateTime theCurrentTime = DateTime.Now;
 
 string useranswer = "0";
+string userName = "username";
 // create an object from the Journal class to use it through the if statement after
 Journal addToList = new();
 string filename = "";
@@ -26,6 +27,10 @@ while (useranswer != "5")
     //When user press 1 the program will call the Prompt Generator and will display the prompt
     if (useranswer == "1")
     {
+        Console.WriteLine("What is your name?");
+        userName = Console.ReadLine();
+
+
         //Create and display a random prompt
         PromptGenerator newprompt = new();
         string randomPrompt = newprompt.DisplayRandomPrompt();
@@ -33,6 +38,8 @@ while (useranswer != "5")
         Entry entry = new();
 
         //Take the user entry and prompt
+        entry._name = userName;
+
         entry._response = Console.ReadLine();
 
         entry._prompt = randomPrompt;
