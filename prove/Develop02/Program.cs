@@ -4,13 +4,15 @@ using System;
 //Date
 DateTime theCurrentTime = DateTime.Now;
 
+//These strings will help me to save the user Name and the user answer as a string variable.
 string useranswer = "0";
 string userName = "username";
+
 // create an object from the Journal class to use it through the if statement after
 Journal addToList = new();
 string filename = "";
 
-
+//This while loop will work until the user press 5 to quit the program
 while (useranswer != "5")
 {
     Console.WriteLine("Welcome to the journal program");
@@ -38,7 +40,7 @@ while (useranswer != "5")
         Console.WriteLine($"{randomPrompt}");
         Entry entry = new();
 
-        //Take the user entry and prompt
+        //Save the name, prompt, response and dateTime in the entry object's varables.
         entry._name = userName;
 
         entry._response = Console.ReadLine();
