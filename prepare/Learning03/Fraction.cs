@@ -1,45 +1,33 @@
  public class Fraction 
 {
-    private int _top = 1;
-    private int _bottom = 1;
+    private int _top;
+    private int _bottom;
 
-    public string NumFraction()
+    public Fraction()
     {
-        string number = $"Number is {_top}/{_bottom}";
-
-        return number;
+        _top = 1;
+        _bottom = 1;
     }
-    public string NumFraction(int wholeNumber)
+    public Fraction(int wholeNumber)
     {
-        string number = $"The number is {wholeNumber}/{_bottom}";
-        return number;
+        _top = wholeNumber;
+        _bottom = 1;
     }
-    public string NumFraction(int top, int bottom)
-    {
-        string number = $"The number is {top}/{bottom}";
-        return number;
-
-    }
-
-    public int GetTop()
-    {
-        return _top;
-    }
-
-    public void SetTop(int top)
+    public Fraction(int top, int bottom)
     {
         _top = top;
-    }
-
-    public int GetBottom()
-    {
-        return _bottom;
-    }
-    
-    public void SetBottom(int bottom)
-    {
         _bottom = bottom;
     }
 
+    public string GetFractionString()
+    {
+        string text = $"{_top}/{_bottom}";
+        return text;
+    }
+
+    public double GetDecimalFraction()
+    {
+        return (double)_top / (double)_bottom; 
+    }
 
 }

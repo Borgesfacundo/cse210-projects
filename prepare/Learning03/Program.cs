@@ -4,22 +4,25 @@ class Program
 {
     static void Main(string[] args)
     {
-        Fraction fraction = new();
+        Fraction f1 = new();
         
-       // Console.WriteLine($"{fraction.NumFraction()}");
-       // Console.WriteLine("");
-        
-       // Console.WriteLine($"{fraction.NumFraction(6)}");
-       // Console.WriteLine("");
+        Console.WriteLine(f1.GetFractionString());
+        Console.WriteLine(f1.GetDecimalFraction());
+       
 
-        //Console.WriteLine($"{fraction.NumFraction(6,7)}");
+        Fraction f2 = new(5);
+        Console.WriteLine(f2.GetFractionString());
+        Console.WriteLine(f2.GetDecimalFraction());
 
-        fraction.SetTop(50);
-        Console.WriteLine($"{fraction.GetTop()}");
 
-        fraction.SetBottom(60);
-        Console.WriteLine(fraction.GetBottom());
+        Fraction f3 = new(3,4);
+        Console.WriteLine(f3.GetFractionString());
+        Console.WriteLine(f3.GetDecimalFraction());
 
+
+        Fraction f4 = new(1,3);
+        Console.WriteLine(f4.GetFractionString());
+        Console.WriteLine(f4.GetDecimalFraction());
 
     }
 }
