@@ -3,6 +3,7 @@ using System;
 
 //Date
 DateTime theCurrentTime = DateTime.Now;
+PromptGenerator newprompt = new();
 
 //These strings will help me to save the user Name and the user answer as a string variable.
 string useranswer = "0";
@@ -35,7 +36,6 @@ while (useranswer != "5")
 
 
         //Create and display a random prompt
-        PromptGenerator newprompt = new();
         string randomPrompt = newprompt.DisplayRandomPrompt();
         Console.WriteLine($"{randomPrompt}");
         Entry entry = new();

@@ -1,2 +1,14 @@
-7/10/2023,A,Facundo
-7/10/2023,A,1999
+11/10/2023,How was your day overall?,Facundo,Good
+11/10/2023,How was your day overall?,Facundo,Good
+11/10/2023,Did you learn something new or gain any valuable insights today?,Facundo,Yes
+11/10/2023,How was your day overall?,Facu,Good
+11/10/2023,How was your day overall?,kevin,Good
+11/10/2023,How was your day overall?,Good,asdasd
+11/10/2023,Were there any moments when you felt particularly stressed or challenged?,asdasd,dasdsd
+11/10/2023,Were there any moments when you felt particularly stressed or challenged?,facundo,23
+11/10/2023,What activities or tasks did you find most enjoyable or fulfilling today?,Facundo,3
+11/10/2023,Were there any moments when you felt particularly stressed or challenged?,Facundo,nunca
+11/10/2023,Were there any moments when you felt particularly stressed or challenged?,facundo,nunca
+11/10/2023,How was your day overall?,facundo,nunca
+11/10/2023,How was your day overall?,facundo,nose
+11/10/2023,What was the best part of your day?,facundo,nose
