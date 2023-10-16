@@ -13,12 +13,11 @@ class Program
         //R2.GetDisplayReference();
         
         //Checking Word class
-        Word W1 = new("Facundo");
+        Word W1 = new("Juan");
         W1.Hide();
-        W1.Show();
         Console.WriteLine(W1.Show());
 
-        Word W2 = new("Facundo");
+        Word W2 = new("Pablo");
         W2.Show();
         Console.WriteLine(W2.Show());
         
