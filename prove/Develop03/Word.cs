@@ -20,19 +20,21 @@ class Word
 
     public string Show()
     {
+        // _hide is true, replace _word for udnerscore.
         if (_hide)
         {
             //Get the length of the word
             int length = _word.Length;
             _word = "";
 
-            //Replace word for underscore (same lenght than _word)
+            //Replace word for underscore (same lenght than _word).
             for (int i = 0; i < length; i++)
             {
                 _word += _underscore;
             }
             return _word;
         }
+        //If _hide is false, will return the word normally.
         else 
         {
             return _word;
