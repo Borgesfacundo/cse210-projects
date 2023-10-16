@@ -3,7 +3,7 @@ class Reference
     private string _book;
     private string _chapter;
     private string _verse;
-    private string _endVerse;
+    private string _endVerse = "0";
     private string _reference;
 
     public Reference(string book, string chapter, string verse)
@@ -22,14 +22,15 @@ class Reference
 
     public void GetDisplayReference()
     {
-        if (_endVerse == "")
+        if (_endVerse == "0")
         {
             string _reference = $"{_book} {_chapter}:{_verse}";
+            Console.WriteLine($"{_reference}");
         }
-        else
+        else if (_endVerse != "0")
         {
             string _reference = $"{_book} {_chapter}:{_verse}-{_endVerse}";
-
+            Console.WriteLine($"{_reference}");
         }
     }
 }
