@@ -38,4 +38,9 @@ class Word
             return _word;
         }
     }
+    //This Method is checking if the word were replaced for underscore to choose another to replace
+    public bool IsHidden()
+    {
+        return _hide;
+    }
 }   
