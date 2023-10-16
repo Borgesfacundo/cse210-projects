@@ -5,7 +5,7 @@ class Word
 
     private string _underscore = "";
 
-
+    //This constructor is setting the word
     public Word(string word)
     {
         _word = word;
