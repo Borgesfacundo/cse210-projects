@@ -5,6 +5,12 @@ class Word
 
     private string _underscore = "_";
 
+
+    public Word(string word)
+    {
+        _word = word;
+    }
+
     //Turn _hide true
     public bool Hide()
     {
@@ -12,7 +18,7 @@ class Word
         return _hide;
     }
 
-    public void Show()
+    public string Show()
     {
         if (_hide)
         {
@@ -21,11 +27,15 @@ class Word
             _word = "";
 
             //Replace word for underscore (same lenght than _word)
-            for (int i = 0; i <= length; i++)
+            for (int i = 0; i < length; i++)
             {
                 _word += _underscore;
             }
-
+            return _word;
+        }
+        else 
+        {
+            return _word;
         }
     }
 }   
