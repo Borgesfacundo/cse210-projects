@@ -4,6 +4,7 @@ class Scripture
     private List<Word> _scriptureWords;
     Reference _Reference;
     private string _text;
+    private string _display;
 
     //Constructor passing scripture reference and the text
     public Scripture(Reference Reference, string text)
@@ -28,10 +29,11 @@ class Scripture
             _scriptureWords[index].Hide();
         }
     }
-    //This method would get the text after passignthro Word Class and return it
+    //This method would get the text after passigng thru Word Class and return it
     public string GetRenderedText()
     {
+        _display = $"{_Reference} : {_scriptureWords}";
         
-        return _text;
+        return _display;
     }
 }
