@@ -5,6 +5,8 @@ class Scripture
     Reference _Reference;
     private string _text;
     private string _display;
+    private bool _endProgram;
+
 
     //Constructor passing scripture reference and the text
     public Scripture(Reference Reference, string text)
@@ -35,5 +37,12 @@ class Scripture
         _display = $"{_Reference} : {_scriptureWords}";
         
         return _display;
+    }
+
+    public bool AllHidden()
+    {
+        
+        bool _endProgram = true;
+        return _endProgram;
     }
 }
