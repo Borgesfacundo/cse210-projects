@@ -29,7 +29,7 @@ class Reference
         }
         else if (_endVerse != "0")
         {
-            string _reference = $"{_book} {_chapter}:{_verse}-{_endVerse}";
+            _reference = $"{_book} {_chapter}:{_verse}-{_endVerse}";
             Console.WriteLine($"{_reference}");
         }
     }
