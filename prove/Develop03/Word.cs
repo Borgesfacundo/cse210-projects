@@ -14,7 +14,7 @@ class Word
     //Turn _hide true
     public void Hide()
     {
-        _hide =  true;
+        _hide =  false;
     }
 
     public string Show()
@@ -41,6 +41,7 @@ class Word
     //This Method is checking if the word were replaced for underscore to choose another to replace
     public bool IsHidden()
     {
+        _hide = true;
         return _hide;
     }
 }   
