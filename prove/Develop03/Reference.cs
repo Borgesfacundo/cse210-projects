@@ -25,7 +25,7 @@ class Reference
         if (_endVerse == "0")
         {
             string _reference = $"{_book} {_chapter}:{_verse}";
-            Console.WriteLine($"{_reference}");
+            Console.Write($"{_reference} ");
         }
         else if (_endVerse != "0")
         {

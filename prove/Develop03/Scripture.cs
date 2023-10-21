@@ -12,7 +12,7 @@ class Scripture
     public Scripture(Reference Reference, string text)
     {
         _text = text;
-        _Reference = Reference;
+        Reference.GetDisplayReference();
     }
 
     public void HideWords()
@@ -38,17 +38,25 @@ class Scripture
         //sepparating each word of _text
         string[] words = _text.Split(' ');
 
+        
+
         //Pass each word into Word Class and add it to the Scripture List
         foreach (string _word in words) 
         {
             Word word = new(_word);
             word.Show();
             _scriptureWords.Add(word);
+            _display += $"{word.Show()} ";
         }
 
-        //Displaying the result
-        _display = $"{_Reference} : {_scriptureWords}";
         
+        
+        //add each word to display
+       // for (int i = 0; i <= _scriptureWords.Count; i++)
+        //{
+        //    _display += _scriptureWords[i];
+        //}
+
         return _display;
     }
 
