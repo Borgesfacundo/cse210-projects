@@ -9,25 +9,15 @@ class Program
         
         //Displays References with only one verse
         Reference Reference = new("John", "3", "16");
-        //Reference.GetDisplayReference();
+
         //Create a Scripture Object
         Scripture Scripture = new(Reference, "God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
         Console.WriteLine(Scripture.GetRenderedText());
 
-
-        //Display references with more than one verse
-        //Reference R2 = new("Jose", "5", "2", "5");
-        //R2.GetDisplayReference();
-        
-        //Checking Word class
-        //Word W1 = new("Juan");
-        //W1.Hide();
-        //Console.WriteLine(W1.Show());
-
-        //Word W2 = new("Pablo");
-        //W2.Show();
-        //Console.WriteLine(W2.Show());
-        
+        //While the user press enter the program will hide 3 words
+        while {
+            
+        }
         
     }
 }
