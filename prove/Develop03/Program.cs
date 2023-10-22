@@ -20,7 +20,13 @@ class Program
             input = Console.ReadLine();
             //call HideWords to chose 3 random words to hide
             Scripture.HideWords();
-
+            if (Scripture.AllHidden() == true)
+            {
+                //display all hidden and finish it
+                Console.Clear();
+                Console.WriteLine(Scripture.GetRenderedText());
+                break;
+            }
         }
         while (input != "quit");
     }
