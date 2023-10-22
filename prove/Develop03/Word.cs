@@ -1,9 +1,7 @@
 class Word
 {
     private string _word;
-    private bool _hide;
-
-    private string _underscore = "";
+    private bool isHidden;
 
     //This constructor is setting the word
     public Word(string word)
@@ -11,19 +9,20 @@ class Word
         _word = word;
     }
 
-    //Turn _hide true
+    //false == word / true == change
     public void Hide()
     {
-        _hide =  false;
+        isHidden =  true;
     }
 
     public string Show()
     {
-        // _hide is true, replace _word for udnerscore.
-        if (_hide)
+        // _hide is true, replace _word for underscore.
+        if (isHidden)
         {
             //Get the length of the word
             int length = _word.Length;
+            string _underscore = "";
 
             //Create a string for underscore (same lenght than _word).
             for (int i = 0; i < length; i++)
@@ -41,7 +40,6 @@ class Word
     //This Method is checking if the word were replaced for underscore to choose another to replace
     public bool IsHidden()
     {
-        _hide = true;
-        return _hide;
+        return isHidden;
     }
 }   

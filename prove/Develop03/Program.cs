@@ -15,9 +15,11 @@ class Program
         Console.WriteLine(Scripture.GetRenderedText());
 
         //While the user press enter the program will hide 3 words
-        while {
-            
+        string input = "";
+        do{
+            Console.WriteLine("Type quit to exit");
+            input = Console.ReadLine();
         }
-        
+        while (input != "quit");
     }
 }

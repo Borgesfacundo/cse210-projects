@@ -1,4 +1,3 @@
-
 class Reference 
 {
     private string _book;
@@ -33,10 +32,5 @@ class Reference
             _reference = $"{_book} {_chapter}:{_verse}-{_endVerse}";
             Console.WriteLine($"{_reference}");
         }
-    }
-
-    public static implicit operator Reference(string v)
-    {
-        throw new NotImplementedException();
     }
 }
