@@ -1,3 +1,5 @@
+
+
 class Word
 {
     private string _word;
@@ -42,4 +44,4 @@ class Word
     {
         return isHidden;
     }
-}   
+}

@@ -16,7 +16,7 @@ class Program
             Console.Clear();
             Console.WriteLine(Scripture.GetRenderedText());
 
-            Console.WriteLine("Type quit to exit");
+            Console.WriteLine("Press enter to continue or type 'quit' to finish:");
             input = Console.ReadLine();
             //call HideWords to chose 3 random words to hide
             Scripture.HideWords();
