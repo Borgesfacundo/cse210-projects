@@ -4,7 +4,6 @@ class Reference
     private string _chapter;
     private string _verse;
     private string _endVerse = "0";
-    private string _reference;
 
     public Reference(string book, string chapter, string verse)
     {
@@ -20,17 +19,17 @@ class Reference
         _endVerse = endVerse;
     }
 
-    public void GetDisplayReference()
+    public string GetDisplayReference()
     {
+        string renderText = "";
         if (_endVerse == "0")
         {
-            string _reference = $"{_book} {_chapter}:{_verse}";
-            Console.Write($"{_reference} ");
+            renderText = $"{_book} {_chapter}:{_verse}";
         }
         else if (_endVerse != "0")
         {
-            _reference = $"{_book} {_chapter}:{_verse}-{_endVerse}";
-            Console.WriteLine($"{_reference}");
+            renderText = $"{_book} {_chapter}:{_verse}-{_endVerse}";
         }
+        return renderText;
     }
 }

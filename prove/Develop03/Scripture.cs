@@ -1,18 +1,18 @@
 class Scripture
 {
     //This list will store each Word._word
-    private List<Word> _scriptureWords = new List<Word>();
+    private List<Word> words = new List<Word>();
     Reference _Reference;
-    private string _text;
-    private string _display;
-    private bool _endProgram;
-    private string _userAnswer;
 
 
     //Constructor passing scripture reference and the text
     public Scripture(Reference Reference, string text)
     {
-        _text = text;
+        string[] _words = text.Split(' ');
+        foreach (string word in _words)
+        {
+            words.Add(new Word(word));
+        }
         _Reference = Reference;
     }
 
@@ -25,61 +25,37 @@ class Scripture
                 //Random (Next line i created dont know if its right)
                 Random random = new();
                 //Choose 3 random words inside the list
-                int index = random.Next(_scriptureWords.Count);
-                _scriptureWords[index].Hide();
+                int index = random.Next(words.Count);
+                words[index].Hide();
 
         }
     }
     //This method would get the text after passigng thru Word Class and return it
     public string GetRenderedText()
     {
-        //Display Reference
-        _Reference.GetDisplayReference();
-
-        //sepparating each word of _text
-        string[] words = _text.Split(' ');
+        string renderText = _Reference.GetDisplayReference();
+        renderText += "\n";
 
         //Pass each word into Word Class and add it to the Scripture List
-        foreach (string _word in words) 
+        foreach (Word _word in this.words) 
         {
-            Word word = new(_word);
-            word.Show();
-            _scriptureWords.Add(word);
-            _display += $"{word.Show()} ";
+            renderText += $"{_word.Show()} ";
         }
-            //modify text
-            _text = _display;
 
-        return _display;
+        return renderText;
     }
 
     public bool AllHidden()
     {
         bool result = true;
-        for (int i = 0; i < _scriptureWords.Count; i++)
+        for (int i = 0; i < words.Count; i++)
         {
-            if (_scriptureWords[i].IsHidden() == false)
+            if (words[i].IsHidden() == false)
             {
                 result = false;
                 break;
             }
         }
         return result;
-    }
-
-    public void Anything()
-    {
-        bool condition = false;
-        string input = "";
-        while (condition)
-        {
-
-        }
-        do{
-            condition = true;
-            Console.WriteLine("Type quit to exit");
-            input = Console.ReadLine();
-        }
-        while (input != "quit");
     }
 }
