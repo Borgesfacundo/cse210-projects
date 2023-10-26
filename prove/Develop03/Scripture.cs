@@ -30,19 +30,23 @@ class Scripture
         for (int i = 0; i < 3; i++)
         {
             Random random = new();
-            for (int a = 0; a <= visibleWords.Count; a++)
+            for (int a = 0; a < visibleWords.Count; a++)
             {
-             //   if (visibleWords[a].IsHidden() == true)
-             //   {
-              //      visibleWords.Remove(visibleWords[a]);
-               // }
-            }
-            //Choose 3 random words inside the list
-            int index = random.Next(visibleWords.Count);
-            //Icouldnt exceed requirements :c
-            //Word result = words.Find(x => x.GetId() == visibleWords[index]);
+                //if a word has a Hide() true will remove it from the new list
+                if (words[a].IsHidden() == true)
+                {
+                    visibleWords.Remove(visibleWords[a]);
+                }
+                    //Choose 3 random words inside the list
+                    int index = random.Next(visibleWords.Count);
 
-            words[index].Hide();
+                    
+                    Word searchString = visibleWords[index];
+                    int index2 = words.IndexOf(searchString);  // index is 1
+
+                    //Hide a word
+                    words[index2].Hide();
+            }
         }
 
     }
