@@ -14,7 +14,7 @@ class Word
     //false == word / true == change
     public void Hide()
     {
-        isHidden =  true;
+        isHidden = true;
     }
 
     public string Show()
@@ -34,7 +34,7 @@ class Word
             return _underscore;
         }
         //If _hide is false, will return the word normally.
-        else 
+        else
         {
             return _word;
         }

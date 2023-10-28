@@ -20,7 +20,7 @@ class Scripture
     {
         //while loop 
         for (int i = 0; i < 3; i++)
-        {          
+        {
             //new List to veryfi if word is hidden
             List<Word> isVisible = new List<Word>();
 
@@ -33,7 +33,7 @@ class Scripture
                 }
             }
             Random random = new();
-            
+
             //Choose 3 random words inside the list
             int index = random.Next(isVisible.Count);
 
@@ -50,7 +50,7 @@ class Scripture
         renderText += "\n";
 
         //Pass each word into Word Class and add it to the Scripture List
-        foreach (Word _word in this.words) 
+        foreach (Word _word in this.words)
         {
             renderText += $"{_word.Show()} ";
         }
@@ -71,5 +71,5 @@ class Scripture
         }
         return result;
     }
-    
+
 }

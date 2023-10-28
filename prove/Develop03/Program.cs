@@ -3,7 +3,7 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {        
+    {
         //Displays References with only one verse
         Reference Reference = new("John", "3", "16");
 
@@ -12,7 +12,8 @@ class Program
 
         //While the user press enter the program will hide 3 words
         string input = "";
-        do{
+        do
+        {
             Console.Clear();
             Console.WriteLine(Scripture.GetRenderedText());
 

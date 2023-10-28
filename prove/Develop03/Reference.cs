@@ -1,4 +1,4 @@
-class Reference 
+class Reference
 {
     private string _book;
     private string _chapter;
