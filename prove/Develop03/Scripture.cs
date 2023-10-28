@@ -20,14 +20,27 @@ class Scripture
     {
         //while loop 
         for (int i = 0; i < 3; i++)
-        {
+        {          
+            //new List to veryfi if word is hidden
+            List<Word> isVisible = new List<Word>();
+
+            //iterate thru words List
+            for (int a = 0; a < words.Count; a++)
+            {
+                if (words[a].IsHidden() == false)
+                {
+                    isVisible.Add(words[a]);
+                }
+            }
             Random random = new();
             
             //Choose 3 random words inside the list
-            int index = random.Next(words.Count);  
+            int index = random.Next(isVisible.Count);
+
+            int indexToAdd = words.IndexOf(isVisible[index]);  // index is 1
+
             //Hide a word
-            words[index].Hide();
-            
+            words[indexToAdd].Hide();
         }
     }
     //This method would get the text after passigng thru Word Class and return it
