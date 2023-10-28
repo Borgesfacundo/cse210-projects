@@ -4,8 +4,6 @@ class Scripture
     private List<Word> words = new List<Word>();
     Reference _Reference;
 
-    private List<Word> visibleWords = new List<Word>();
-
 
     //Constructor passing scripture reference and the text
     public Scripture(Reference Reference, string text)
@@ -16,12 +14,6 @@ class Scripture
             words.Add(new Word(word));
         }
         _Reference = Reference;
-        // new List
-        foreach (string word in _words)
-        {
-            //add all words
-            visibleWords.Add(new Word(word));
-        }
     }
 
     public void HideWords()
@@ -30,25 +22,13 @@ class Scripture
         for (int i = 0; i < 3; i++)
         {
             Random random = new();
-            for (int a = 0; a < visibleWords.Count; a++)
-            {
-                //if a word has a Hide() true will remove it from the new list
-                if (words[a].IsHidden() == true)
-                {
-                    visibleWords.Remove(visibleWords[a]);
-                }
-                    //Choose 3 random words inside the list
-                    int index = random.Next(visibleWords.Count);
-
-                    
-                    Word searchString = visibleWords[index];
-                    int index2 = words.IndexOf(searchString);  // index is 1
-
-                    //Hide a word
-                    words[index2].Hide();
-            }
+            
+            //Choose 3 random words inside the list
+            int index = random.Next(words.Count);  
+            //Hide a word
+            words[index].Hide();
+            
         }
-
     }
     //This method would get the text after passigng thru Word Class and return it
     public string GetRenderedText()
