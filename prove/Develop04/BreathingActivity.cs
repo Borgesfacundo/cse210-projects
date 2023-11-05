@@ -4,4 +4,13 @@ class BreathingActivity : Activity
     {
 
     }
+    public void Run()
+    {
+        GetStartingMessage();
+        SetTime();
+        CountDownTimer(500);
+        ShowSpinner(7);
+    }
+
+    
 }

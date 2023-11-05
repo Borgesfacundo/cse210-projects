@@ -16,7 +16,7 @@ class Activity
     //create the starting message for each Activity
     public string GetStartingMessage()
     {
-        _startMessage = $"Welcome to {_activityName}. \n {_description}";
+        _startMessage = $"Welcome to {_activityName}. \n \n{_description}\n";
         return _startMessage;
     }
 
@@ -36,12 +36,9 @@ class Activity
     }
     public void CountDownTimer(int seconds)
     {
-        seconds = seconds * 1000 / 5;
-        Console.WriteLine("Going to sleep for a second...");
+        Console.WriteLine("Get ready...");
 
         Thread.Sleep(seconds);
-
-        Console.WriteLine("I'm back!!");
     }
     public void ShowSpinner(int seconds)
     {
@@ -55,7 +52,7 @@ class Activity
         animationString.Add("-");
         animationString.Add("\\");
 
-        DateTime endTime = startTime.AddSeconds(5);
+        DateTime endTime = startTime.AddSeconds(seconds);
         int i = 0;
 
         while (DateTime.Now < endTime)

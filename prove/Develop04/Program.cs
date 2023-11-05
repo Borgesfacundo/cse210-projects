@@ -12,9 +12,9 @@ class Program
         //A1.ShowSpinner(20);
         //A1.EndMessage();
 
-        BreathingActivity A2 = new BreathingActivity("Breathing Activity", "This is a nice breathing activity");
+        BreathingActivity A2 = new BreathingActivity("Breathing Activity", "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.");
         Console.WriteLine(A2.GetStartingMessage());
-        A2.EndMessage();
+        A2.Run();
         
     }
 }
