@@ -8,9 +8,30 @@ class BreathingActivity : Activity
     {
         GetStartingMessage();
         SetTime();
-        CountDownTimer(500);
+        Console.WriteLine("Get ready...");
         ShowSpinner(7);
+
+        DateTime endTime = startTime.AddSeconds(duration);
+
+        //This is making the Activity show the brethe in and breathe out messages for the time the user wants (Seconds)
+        while (DateTime.Now < endTime)
+        {
+            ShowBreathInMessage(4);
+
+            ShowBreathOutMessage(6);
+        }
+
+
     }
 
-    
+    public void ShowBreathInMessage(int duration)
+    {
+        Console.Write("\n \nBreathe in...");
+        CountDownTimer(duration);
+    }
+    public void ShowBreathOutMessage(int duration)
+    {
+        Console.Write("\nNow breathe out...");
+        CountDownTimer(duration);
+    }
 }

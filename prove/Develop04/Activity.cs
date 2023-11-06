@@ -4,7 +4,7 @@ class Activity
     private string _description;
     protected int duration;
     private string _startMessage;
-    DateTime startTime = DateTime.Now;
+    protected DateTime startTime = DateTime.Now;
 
     //Constructor to get activityName, description, startMessage and endMessage
     public Activity(string activityName, string description)
@@ -32,13 +32,18 @@ class Activity
     public void EndMessage()
     {
         Console.WriteLine("Well done!");
+        ShowSpinner(7);
         Console.WriteLine($"You have completed another {duration} seconds of the {_activityName}");
     }
     public void CountDownTimer(int seconds)
     {
-        Console.WriteLine("Get ready...");
+        for (int i = 4; i > 0; i--)
+        {
+            Console.Write(i);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
 
-        Thread.Sleep(seconds);
+        }
     }
     public void ShowSpinner(int seconds)
     {
