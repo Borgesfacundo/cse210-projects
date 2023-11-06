@@ -49,14 +49,13 @@ class ReflectingActivity : Activity
         Console.WriteLine("\nConsider the following prompt: \n");
         Console.Write($"--- {GetRandomPrompt()} ---");
         Console.WriteLine("\n\nWhen you have something in mind, press enter to continue.");
-        string userInput = Console.ReadLine();
+        Console.ReadLine();
 
         Console.WriteLine("\nNow ponder on each of the following questions as they related to this experience.");
 
         Console.WriteLine("You may begin in:  ");
         CountDownTimer(5);
-        DateTime endT = startTime.AddSeconds(duration);
-        while (DateTime.Now < endT)
+        while (DateTime.Now < endTime)
         {
             Console.Write($"\n{GetRandomQuestion()} ");
             ShowSpinner(10);
