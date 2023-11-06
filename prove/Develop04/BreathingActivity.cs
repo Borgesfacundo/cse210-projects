@@ -9,7 +9,7 @@ class BreathingActivity : Activity
         GetStartingMessage();
         SetTime();
         Console.WriteLine("Get ready...");
-        ShowSpinner(7);
+        ShowSpinner(6);
 
         DateTime endTime = startTime.AddSeconds(duration);
 
@@ -20,8 +20,8 @@ class BreathingActivity : Activity
 
             ShowBreathOutMessage(6);
         }
-
-
+        EndMessage();
+        ShowSpinner(4);
     }
 
     public void ShowBreathInMessage(int duration)

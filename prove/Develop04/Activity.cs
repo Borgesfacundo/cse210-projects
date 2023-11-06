@@ -31,13 +31,13 @@ class Activity
 
     public void EndMessage()
     {
-        Console.WriteLine("Well done!");
-        ShowSpinner(7);
-        Console.WriteLine($"You have completed another {duration} seconds of the {_activityName}");
+        Console.WriteLine("\n\nWell done!");
+        ShowSpinner(6);
+        Console.WriteLine($"\nYou have completed another {duration} seconds of the {_activityName}");
     }
     public void CountDownTimer(int seconds)
     {
-        for (int i = 4; i > 0; i--)
+        for (int i = seconds; i > 0; i--)
         {
             Console.Write(i);
             Thread.Sleep(1000);
@@ -56,6 +56,8 @@ class Activity
         animationString.Add("/");
         animationString.Add("-");
         animationString.Add("\\");
+
+        DateTime startTime = DateTime.Now;
 
         DateTime endTime = startTime.AddSeconds(seconds);
         int i = 0;
