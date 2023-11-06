@@ -32,7 +32,7 @@ class Activity
     public void EndMessage()
     {
         Console.WriteLine("\n\nWell done!");
-        ShowSpinner(6);
+        ShowSpinner(5);
         Console.WriteLine($"\nYou have completed another {duration} seconds of the {_activityName}");
     }
     public void CountDownTimer(int seconds)
@@ -66,7 +66,7 @@ class Activity
         {
             string s = animationString[i];
             Console.Write(s);
-            Thread.Sleep(500);
+            Thread.Sleep(300);
             Console.Write("\b \b");
 
             i++;

@@ -6,7 +6,7 @@ class BreathingActivity : Activity
     }
     public void Run()
     {
-        GetStartingMessage();
+        Console.WriteLine(GetStartingMessage());
         SetTime();
         Console.WriteLine("Get ready...");
         ShowSpinner(6);
@@ -21,7 +21,7 @@ class BreathingActivity : Activity
             ShowBreathOutMessage(6);
         }
         EndMessage();
-        ShowSpinner(4);
+        ShowSpinner(5);
     }
 
     public void ShowBreathInMessage(int duration)
