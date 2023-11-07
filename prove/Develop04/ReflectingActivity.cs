@@ -8,7 +8,7 @@ class ReflectingActivity : Activity
 
     }
 
-    public string GetRandomPrompt()
+    private string GetRandomPrompt()
     {
         questions.Add("Think of a time when you stood up for someone else.");
         questions.Add("Think of a time when you did something really difficult.");
@@ -20,7 +20,7 @@ class ReflectingActivity : Activity
         return questions[number];
     }
 
-    public string GetRandomQuestion()
+    private string GetRandomQuestion()
     {
         prompts.Add("Why was this experience meaningful to you?");
         prompts.Add("Have you ever done anything like this before?");

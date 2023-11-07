@@ -14,14 +14,14 @@ class Activity
     }
 
     //create the starting message for each Activity
-    public string GetStartingMessage()
+    protected string GetStartingMessage()
     {
         _startMessage = $"Welcome to {_activityName}. \n \n{_description}\n";
         return _startMessage;
     }
 
     //Ask users about how much time they want to spend in seconds
-    public int SetTime()
+    protected int SetTime()
     {
         Console.WriteLine("How long in seconds, would you like for your session?");
         string answer = Console.ReadLine();
@@ -29,13 +29,13 @@ class Activity
         return duration;
     }
 
-    public void EndMessage()
+    protected void EndMessage()
     {
         Console.WriteLine("\nWell done!!");
         ShowSpinner(5);
         Console.WriteLine($"\nYou have completed another {duration} seconds of the {_activityName}");
     }
-    public void CountDownTimer(int seconds)
+    protected void CountDownTimer(int seconds)
     {
         for (int i = seconds; i > 0; i--)
         {
@@ -45,7 +45,7 @@ class Activity
 
         }
     }
-    public void ShowSpinner(int seconds)
+    protected void ShowSpinner(int seconds)
     {
         List<string> animationString = new List<string>();
         animationString.Add("|");
@@ -78,13 +78,13 @@ class Activity
         }
 
     }
-   // public void ClearCharacters(int charCount)
-   // {
-   //     string clear = "\b";
-   //     for (int i = 0; i <= charCount; i++)
-   //     {
-   //         clear += " \b";
-   //     }
-   //     Console.Write(clear);
-   // }
+    // public void ClearCharacters(int charCount)
+    // {
+    //     string clear = "\b";
+    //     for (int i = 0; i <= charCount; i++)
+    //     {
+    //         clear += " \b";
+    //     }
+    //     Console.Write(clear);
+    // }
 }

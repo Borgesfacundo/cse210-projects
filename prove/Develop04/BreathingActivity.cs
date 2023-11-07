@@ -31,6 +31,7 @@ class BreathingActivity : Activity
     {
         Console.Write("\n \nBreathe in...");
         CountDownTimer(duration);
+
     }
     public void ShowBreathOutMessage(int duration)
     {

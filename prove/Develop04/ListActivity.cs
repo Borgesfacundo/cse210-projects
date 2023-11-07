@@ -1,12 +1,12 @@
 class ListActivity : Activity
 {
-    List<string> prompts = new List<string>();
+    private List<string> prompts = new List<string>();
 
     public ListActivity(string activityName, string description) : base(activityName, description)
     {
 
     }
-    public string GetRandomPrompt()
+    private string GetRandomPrompt()
     {
         prompts.Add("Who are people that you appreciate?");
         prompts.Add("What are personal strengths of yours?");
@@ -38,7 +38,7 @@ class ListActivity : Activity
         {
             string answer = Console.ReadLine();
             userAnswer.Add(answer);
-            
+
         }
         Console.WriteLine($"\nYou listed {userAnswer.Count} items!");
         EndMessage();
