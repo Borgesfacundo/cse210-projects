@@ -8,6 +8,7 @@ class BreathingActivity : Activity
     {
         Console.WriteLine(GetStartingMessage());
         SetTime();
+        Console.Clear();
         Console.WriteLine("Get ready...");
         ShowSpinner(6);
         DateTime startTime = DateTime.Now;
@@ -20,6 +21,7 @@ class BreathingActivity : Activity
 
             ShowBreathOutMessage(6);
         }
+        Console.WriteLine();
         EndMessage();
         ShowSpinner(5);
     }
