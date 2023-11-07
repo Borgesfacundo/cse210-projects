@@ -43,6 +43,7 @@ class ListActivity : Activity
         Console.WriteLine($"\nYou listed {userAnswer.Count} items!");
         EndMessage();
         ShowSpinner(5);
+        Console.Clear();
 
     }
 }

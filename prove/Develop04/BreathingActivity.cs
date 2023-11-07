@@ -24,6 +24,7 @@ class BreathingActivity : Activity
         Console.WriteLine();
         EndMessage();
         ShowSpinner(5);
+        Console.Clear();
     }
 
     public void ShowBreathInMessage(int duration)

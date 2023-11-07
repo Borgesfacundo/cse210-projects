@@ -67,6 +67,7 @@ class ReflectingActivity : Activity
         Console.WriteLine();
         EndMessage();
         ShowSpinner(5);
+        Console.Clear();
 
 
     }

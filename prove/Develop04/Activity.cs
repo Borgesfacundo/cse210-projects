@@ -78,13 +78,13 @@ class Activity
         }
 
     }
-    public void ClearCharacters(int charCount)
-    {
-        string clear = "\b";
-        for (int i = 0; i <= charCount; i++)
-        {
-            clear += " \b";
-        }
-        Console.Write(clear);
-    }
+   // public void ClearCharacters(int charCount)
+   // {
+   //     string clear = "\b";
+   //     for (int i = 0; i <= charCount; i++)
+   //     {
+   //         clear += " \b";
+   //     }
+   //     Console.Write(clear);
+   // }
 }
