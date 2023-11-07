@@ -10,7 +10,7 @@ class BreathingActivity : Activity
         SetTime();
         Console.WriteLine("Get ready...");
         ShowSpinner(6);
-
+        DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
         //This is making the Activity show the brethe in and breathe out messages for the time the user wants (Seconds)

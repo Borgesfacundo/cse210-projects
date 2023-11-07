@@ -4,7 +4,7 @@ class Activity
     private string _description;
     protected int duration;
     private string _startMessage;
-    protected DateTime startTime = DateTime.Now;
+    DateTime startTime = DateTime.Now;
 
     //Constructor to get activityName, description, startMessage and endMessage
     public Activity(string activityName, string description)

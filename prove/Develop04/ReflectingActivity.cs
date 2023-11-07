@@ -43,6 +43,7 @@ class ReflectingActivity : Activity
         SetTime();
         Console.WriteLine("Get ready...");
         ShowSpinner(6);
+        DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
 
         //Give a random question to the user
