@@ -41,10 +41,9 @@ class ReflectingActivity : Activity
     {
         Console.WriteLine(GetStartingMessage());
         SetTime();
+        Console.Clear();
         Console.WriteLine("Get ready...");
         ShowSpinner(6);
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(duration);
 
         //Give a random question to the user
         Console.WriteLine("\nConsider the following prompt: \n");
@@ -52,16 +51,20 @@ class ReflectingActivity : Activity
         Console.WriteLine("\n\nWhen you have something in mind, press enter to continue.");
         Console.ReadLine();
 
-        Console.WriteLine("\nNow ponder on each of the following questions as they related to this experience.");
+        Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
 
-        Console.WriteLine("You may begin in:  ");
+        Console.Write("You may begin in: ");
         CountDownTimer(5);
+        Console.Clear();
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(duration);
         while (DateTime.Now < endTime)
         {
             Console.Write($"\n{GetRandomQuestion()} ");
             ShowSpinner(10);
 
         }
+        Console.WriteLine();
         EndMessage();
         ShowSpinner(5);
 

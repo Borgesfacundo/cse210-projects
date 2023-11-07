@@ -23,19 +23,22 @@ class ListActivity : Activity
     {
         Console.WriteLine(GetStartingMessage());
         SetTime();
-        Console.Write("Get ready...");
+        Console.Clear();
+        Console.Write("Get ready...\n");
         ShowSpinner(6);
         List<string> userAnswer = new List<string>();
-        Console.WriteLine("List as many responses you can to the following prompt :");
+        Console.WriteLine("\nList as many responses you can to the following prompt :");
+        Console.WriteLine($"--- {GetRandomPrompt()} ---");
         Console.Write("You may begin in: ");
         CountDownTimer(3);
-        Console.WriteLine($"--- {GetRandomPrompt()} ---");
+        Console.WriteLine();
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(duration);
         while (DateTime.Now < endTime)
         {
             string answer = Console.ReadLine();
             userAnswer.Add(answer);
+            
         }
         Console.WriteLine($"\nYou listed {userAnswer.Count} items!");
         EndMessage();
