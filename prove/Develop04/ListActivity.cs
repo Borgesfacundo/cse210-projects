@@ -16,7 +16,7 @@ class ListActivity : Activity
 
         Random randomPrompt = new Random();
         int number = randomPrompt.Next(prompts.Count);
-
+        
         return prompts[number];
     }
     public void Run()

@@ -5,6 +5,7 @@ class Activity
     protected int duration;
     private string _startMessage;
     DateTime startTime = DateTime.Now;
+    protected bool isHidden;
 
     //Constructor to get activityName, description, startMessage and endMessage
     public Activity(string activityName, string description)
@@ -76,7 +77,6 @@ class Activity
                 i = 0;
             }
         }
-
     }
     // public void ClearCharacters(int charCount)
     // {
