@@ -12,5 +12,17 @@ class Program
 
         Circle circle = new Circle(14, "blue");
         Console.WriteLine(circle.GetArea());
+
+        List<Shape> holdShapes = new List<Shape>();
+        holdShapes.Add(square);
+        holdShapes.Add(rectangle);
+        holdShapes.Add(circle);
+
+        foreach (Shape shape in holdShapes)
+        {
+            string color = shape.GetColor();
+            double area = shape.GetArea();
+            Console.WriteLine($"The {color} shape has an area of {area}");
+        }
     }
 }
