@@ -16,4 +16,8 @@ class EternalGoal : Goal
     {
         return $"{GetName()}, {_description}, {_points}";
     }
+    public override int RecordEvent()
+    {
+        return _points;
+    }
 }
