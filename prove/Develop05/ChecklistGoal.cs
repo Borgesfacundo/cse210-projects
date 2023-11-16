@@ -15,15 +15,25 @@ class ChecklistGoal : CompletableGoal
     }
     public override int RecordEvent()
     {
-        return base.RecordEvent();
+        _timesCompleted += 1;
+        if (_timesCompleted == _timesToComplete)
+        {
+            Console.WriteLine($"Congratz you earn {_bonusAmount} bonus points for complete your goal: {_description}");
+            return _points + _bonusAmount;
+        }
+        else
+        {
+            Console.WriteLine($"Well done you earned {_points} points!");
+            return _points;
+        }
     }
     public override string ToSavedString()
     {
-
+        return $"{GetName()}, {_description}, {_points}, {_bonusAmount}, {_timesToComplete}, {_timesCompleted}";
     }
     public override string ToString()
     {
-        return base.ToString();
+        return $"{GetName()} ({_description}) -- Currently completed: {_timesToComplete}/{_timesCompleted}";
     }
 
 }

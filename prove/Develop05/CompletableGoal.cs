@@ -11,12 +11,12 @@ abstract class CompletableGoal : Goal
     {
         
     }
-    public override string ToSavedString()
-    {
-        return "";
-    }
-    public override string ToString()
-    {
-        return "";
-    }
+    //public override string ToSavedString()
+    //{
+    //    return "";
+    //}
+    //public override string ToString()
+    //{
+    //    return "";
+    //}
 }
