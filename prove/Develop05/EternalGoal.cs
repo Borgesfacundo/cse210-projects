@@ -10,10 +10,10 @@ class EternalGoal : Goal
     }
     public override string ToString()
     {
-        return $"{GetName()} {_description} {_points}";
+        return $"{GetName()} ({_description})";
     }
     public override string ToSavedString()
     {
-        return $"{GetName}, {_description}, {_points}";
+        return $"{GetName()}, {_description}, {_points}";
     }
 }
