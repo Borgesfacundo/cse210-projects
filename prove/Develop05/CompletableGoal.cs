@@ -9,14 +9,14 @@ abstract class CompletableGoal : Goal
 
     protected CompletableGoal(string savedString) : base(savedString)
     {
-        
+
     }
-    //public override string ToSavedString()
-    //{
-    //    return "";
-    //}
-    //public override string ToString()
-    //{
-    //    return "";
-    //}
+    public override string ToSavedString()
+    {
+        return $"{this.GetType().Name}, {GetName()}, {_description}, {_points}, {isCompleted}";
+    }
+    public override string ToString()
+    {
+        return $"{GetName()} ({_description})";
+    }
 }

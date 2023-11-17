@@ -3,7 +3,7 @@ abstract class Goal
     private string _name;
     protected string _description;
     protected int _points;
-    
+
 
     public Goal(string name, string description, int points)
     {
@@ -30,8 +30,14 @@ abstract class Goal
         return _points;
     }
 
-    public abstract string ToSavedString();
+    public virtual string ToSavedString()
+    {
+        return $"{this.GetType().Name}, {GetName()}, {_description}, {_points}";
+    }
 
-    public abstract string ToString();
+    public virtual string ToString()
+    {
+        return $"{GetName()} ({_description})";
+    }
 
 }

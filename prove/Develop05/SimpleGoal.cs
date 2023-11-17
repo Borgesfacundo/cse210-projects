@@ -1,7 +1,8 @@
-class SimpleGoal : Goal
+class SimpleGoal : CompletableGoal
 {
     public override int RecordEvent()
     {
+        isCompleted = true;
         return _points;
     }
     public SimpleGoal(string name, string description, int points) : base(name, description, points)
@@ -11,16 +12,6 @@ class SimpleGoal : Goal
     public SimpleGoal(string savedString) : base(savedString)
     {
 
-    }
-
-    public override string ToString()
-    {
-        return $"{GetName()} ({_description})";
-    }
-
-    public override string ToSavedString()
-    {
-        return $"{GetName()}, {_description}, {_points}";
     }
 
 }

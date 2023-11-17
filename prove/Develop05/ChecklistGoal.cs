@@ -18,7 +18,7 @@ class ChecklistGoal : CompletableGoal
         _timesCompleted += 1;
         if (_timesCompleted == _timesToComplete)
         {
-            Console.WriteLine($"Congratz you earn {_bonusAmount} bonus points for complete your goal: {_description}");
+            isCompleted = true;
             return _points + _bonusAmount;
         }
         else
@@ -29,7 +29,7 @@ class ChecklistGoal : CompletableGoal
     }
     public override string ToSavedString()
     {
-        return $"{GetName()}, {_description}, {_points}, {_bonusAmount}, {_timesToComplete}, {_timesCompleted}";
+        return $"{this.GetType().Name}, {GetName()}, {_description}, {_points}, {_bonusAmount}, {_timesToComplete}, {_timesCompleted}";
     }
     public override string ToString()
     {

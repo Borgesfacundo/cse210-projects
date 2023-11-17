@@ -18,13 +18,13 @@ class Program
         int point = int.Parse(points);
 
         EternalGoal eternalGoal = new EternalGoal(name, description, point);
-        
+
         goals.Add(eternalGoal);
         foreach (Goal a in goals)
         {
             string g = a.ToSavedString();
             Console.WriteLine(g);
-            
+
         }
 
     }
