@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class Program
 {
@@ -78,6 +79,22 @@ class Program
                 foreach (Goal goals in goalsList)
                 {
                     Console.WriteLine(goals.ToString());
+                }
+            }
+            if (userInput == 3)
+            {
+                Console.Write("What is the filename for the goal file? ");
+                string filename = Console.ReadLine();
+
+                using (StreamWriter outputFile = new StreamWriter(filename))
+                {
+
+                    outputFile.WriteLine(totalPoints);
+                    // You can add text to the file with the WriteLine method
+                    foreach (Goal goals in goalsList)
+                    {
+                        outputFile.WriteLine(goals.ToSavedString());
+                    }
                 }
             }
         }
