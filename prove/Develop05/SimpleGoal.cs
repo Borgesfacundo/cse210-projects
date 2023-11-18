@@ -2,6 +2,7 @@ class SimpleGoal : CompletableGoal
 {
     public override int RecordEvent()
     {
+        Console.WriteLine($"Congratulations! You have earned {_points} points!");
         isCompleted = true;
         return _points;
     }

@@ -33,12 +33,13 @@ class ChecklistGoal : CompletableGoal
         _timesCompleted += 1;
         if (_timesCompleted == _timesToComplete)
         {
+            Console.WriteLine($"Congratulations! You have earned {_points} points!");
             isCompleted = true;
             return _points + _bonusAmount;
         }
         else
         {
-            Console.WriteLine($"Well done you earned {_points} points!");
+            Console.WriteLine($"Congratulations! You have earned {_points} points!");
             return _points;
         }
     }

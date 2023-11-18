@@ -136,16 +136,18 @@ class Program
 
                 for (int i = 0; i < goalsList.Count; i++)
                 {
-                    Console.WriteLine($"{i+1}. {goalsList[i].GetName()}");
+                    Console.WriteLine($"{i + 1}. {goalsList[i].GetName()}");
                 }
 
-            Console.Write("Wich goal did you accomplish? ");
-            int recordEvent = int.Parse(Console.ReadLine());
-            recordEvent -= 1; 
+                Console.Write("Wich goal did you accomplish? ");
+                int recordEvent = int.Parse(Console.ReadLine());
+                recordEvent -= 1;
 
-            totalPoints += goalsList[recordEvent].RecordEvent();
+                totalPoints += goalsList[recordEvent].RecordEvent();
+
+                Console.WriteLine($"You now have {totalPoints} points.");
             }
-            
+
         }
     }
 }

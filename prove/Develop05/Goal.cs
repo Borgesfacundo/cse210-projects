@@ -34,6 +34,7 @@ abstract class Goal
 
     public virtual int RecordEvent()
     {
+        Console.WriteLine($"Congratulations! You have earned {_points} points!");
         return _points;
     }
 
