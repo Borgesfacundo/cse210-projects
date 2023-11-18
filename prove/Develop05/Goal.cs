@@ -15,6 +15,13 @@ abstract class Goal
     public Goal(string savedString)
     {
 
+        string[] parts = savedString.Split(",");
+
+        string typeOfGoal = parts[0];
+        _name = parts[1];
+        _description = parts[2];
+        _points = int.Parse(parts[3]);
+
     }
     public void SetName(string name)
     {
@@ -37,7 +44,7 @@ abstract class Goal
 
     public virtual string ToString()
     {
-        return $"{GetName()} ({_description})";
+        return $"[ ] {GetName()} ({_description})";
     }
 
 }
