@@ -16,7 +16,7 @@ class SimpleGoal : CompletableGoal
         SetName(parts[1]);
         _description = parts[2];
         _points = int.Parse(parts[3]);
-        if (parts[4] == "true")
+        if (parts[4] == "True")
         {
             isCompleted = true;
         }

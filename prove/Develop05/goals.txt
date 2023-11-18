@@ -1,4 +1,4 @@
-0
-SimpleGoal, play soccer, go to trainning, 150, False
-EternalGoal, go to the temple, Go each week, 150
-ChecklistGoal, Go to class, At least 1 time each day, 100, 500, 4, 0, False
+1250
+SimpleGoal,Play Soccer,Joint the soccer team,200,True
+EternalGoal,Go to the temple,At least one time each month,100
+ChecklistGoal,Do Excersice,3 times this week,150,500,3,3,True

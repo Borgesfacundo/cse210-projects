@@ -97,6 +97,55 @@ class Program
                     }
                 }
             }
+            if (userInput == 4)
+            {
+                Console.Write("What is the filename of the goal file? ");
+                string filename = Console.ReadLine();
+
+                string[] lines = System.IO.File.ReadAllLines(filename);
+                totalPoints = int.Parse(lines[0]);
+
+                foreach (string line in lines)
+                {
+                    string[] parts = line.Split(",");
+
+                    string goalClass = parts[0];
+
+
+                    if (goalClass == "SimpleGoal")
+                    {
+                        SimpleGoal simpleGoal = new SimpleGoal(line);
+                        goalsList.Add(simpleGoal);
+                    }
+                    if (goalClass == "EternalGoal")
+                    {
+                        EternalGoal eternalGoal = new EternalGoal(line);
+                        goalsList.Add(eternalGoal);
+
+                    }
+                    if (goalClass == "ChecklistGoal")
+                    {
+                        ChecklistGoal checklistGoal = new ChecklistGoal(line);
+                        goalsList.Add(checklistGoal);
+                    }
+                }
+            }
+            if (userInput == 5)
+            {
+                Console.WriteLine("The goals are:");
+
+                for (int i = 0; i < goalsList.Count; i++)
+                {
+                    Console.WriteLine($"{i+1}. {goalsList[i].GetName()}");
+                }
+
+            Console.Write("Wich goal did you accomplish? ");
+            int recordEvent = int.Parse(Console.ReadLine());
+            recordEvent -= 1; 
+
+            totalPoints += goalsList[recordEvent].RecordEvent();
+            }
+            
         }
     }
 }

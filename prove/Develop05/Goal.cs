@@ -39,7 +39,7 @@ abstract class Goal
 
     public virtual string ToSavedString()
     {
-        return $"{this.GetType().Name}, {GetName()}, {_description}, {_points}";
+        return $"{this.GetType().Name},{GetName()},{_description},{_points}";
     }
 
     public virtual string ToString()

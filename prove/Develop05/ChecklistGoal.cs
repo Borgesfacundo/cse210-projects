@@ -17,9 +17,9 @@ class ChecklistGoal : CompletableGoal
         _description = parts[2];
         _points = int.Parse(parts[3]);
         _bonusAmount = int.Parse(parts[4]);
-        _timesToComplete = int.Parse(parts[5]);
-        _timesCompleted = int.Parse(parts[6]);
-        if (parts[7] == "true")
+        _timesCompleted = int.Parse(parts[5]);
+        _timesToComplete = int.Parse(parts[6]);
+        if (parts[7] == "True")
         {
             isCompleted = true;
         }
@@ -44,17 +44,17 @@ class ChecklistGoal : CompletableGoal
     }
     public override string ToSavedString()
     {
-        return $"{this.GetType().Name}, {GetName()}, {_description}, {_points}, {_bonusAmount}, {_timesToComplete}, {_timesCompleted}, {isCompleted}";
+        return $"{this.GetType().Name},{GetName()},{_description},{_points},{_bonusAmount},{_timesCompleted},{_timesToComplete},{isCompleted}";
     }
     public override string ToString()
     {
         if (isCompleted == true)
         {
-        return $"[X] {GetName()} ({_description}) -- Currently completed: {_timesToComplete}/{_timesCompleted}";
+        return $"[X] {GetName()} ({_description}) -- Currently completed: {_timesCompleted}/{_timesToComplete}";
         }
         else 
         {
-        return $"[ ] {GetName()} ({_description}) -- Currently completed: {_timesToComplete}/{_timesCompleted}";
+        return $"[ ] {GetName()} ({_description}) -- Currently completed: {_timesCompleted}/{_timesToComplete}";
 
         }
     }
