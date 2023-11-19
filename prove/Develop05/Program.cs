@@ -11,6 +11,9 @@ class Program
 
         while (userInput < 6)
         {
+            //Level record
+            LevelUp levelUp = new LevelUp(totalPoints);
+            levelUp.lvlUp();
 
             Console.WriteLine($"\nYou have {totalPoints} points. \n");
             Console.WriteLine("Menu Options:");
