@@ -21,7 +21,7 @@ class SimpleGoal : CompletableGoal
         {
             isCompleted = true;
         }
-        else 
+        else
         {
             isCompleted = false;
         }

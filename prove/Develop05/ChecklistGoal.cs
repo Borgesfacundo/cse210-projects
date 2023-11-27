@@ -23,7 +23,7 @@ class ChecklistGoal : CompletableGoal
         {
             isCompleted = true;
         }
-        else 
+        else
         {
             isCompleted = false;
         }
@@ -51,11 +51,11 @@ class ChecklistGoal : CompletableGoal
     {
         if (isCompleted == true)
         {
-        return $"[X] {GetName()} ({_description}) -- Currently completed: {_timesCompleted}/{_timesToComplete}";
+            return $"[X] {GetName()} ({_description}) -- Currently completed: {_timesCompleted}/{_timesToComplete}";
         }
-        else 
+        else
         {
-        return $"[ ] {GetName()} ({_description}) -- Currently completed: {_timesCompleted}/{_timesToComplete}";
+            return $"[ ] {GetName()} ({_description}) -- Currently completed: {_timesCompleted}/{_timesToComplete}";
 
         }
     }
