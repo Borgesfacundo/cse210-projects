@@ -23,7 +23,7 @@ class Product
     }
     public double Price()
     {
-        return productPrice;
+        return productPrice * productQuantity;
     }
     public int Quantity()
     {
