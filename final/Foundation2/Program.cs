@@ -18,9 +18,9 @@ class Program
         //Printing information
         Console.WriteLine($"Packing Label:\n{order1.PackingLabel()}");
 
-        Console.WriteLine($"Shipping Label:\n{order1.ShippingLabel()}");
+        Console.WriteLine($"Shipping Label:\n{order1.ShippingLabel()}\n");
 
-        Console.WriteLine($"Total price:\n{order1.TotalPrice()}");
+        Console.WriteLine($"Total price:\n{order1.TotalPrice()}\n");
 
         //Second Order
         Address address2 = new Address("Heredia", "Buenos Aires", "Argentina");
@@ -36,9 +36,9 @@ class Program
         //Printing information
         Console.WriteLine($"Packing Label:\n{order2.PackingLabel()}");
 
-        Console.WriteLine($"Shipping Label:\n{order2.ShippingLabel()}");
+        Console.WriteLine($"Shipping Label:\n{order2.ShippingLabel()}\n");
 
-        Console.WriteLine($"Total price:\n{order2.TotalPrice()}");
+        Console.WriteLine($"Total price:\n{order2.TotalPrice()}\n");
 
     }
 }
