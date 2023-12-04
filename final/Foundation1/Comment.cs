@@ -1,11 +1,14 @@
 class Comment
 {
-    // SMT should be private and initialized with constructor parameters.
-    public string _cAuthor;
-    public string _commentText;
+    private string _cAuthor;
+    private string _commentText;
 
-    // SMT rename this to ToString(). You're not adding a comment here.
-    public string AddComment()
+    public Comment(string author, string commentText)
+    {
+        _cAuthor = author;
+        _commentText = commentText;
+    }
+    public string ToString()
     {
         return $"{_cAuthor}, {_commentText}";
     }

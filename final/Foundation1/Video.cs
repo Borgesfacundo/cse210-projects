@@ -1,13 +1,20 @@
 
 using System.ComponentModel;
+using System.Text;
 
 class Video
 {
-    // SMT should be private and initialized with constructor parameters.
-    public string _title;
-    public string _author;
-    public int _length;
-    public List<Comment> comments = new List<Comment>();
+    private string _title;
+    private string _author;
+    private int _length;
+    private List<Comment> comments = new List<Comment>();
+
+    public Video(string title, string author, int length)
+    {
+        _title = title;
+        _author = author;
+        _length = length;
+    }
     public int NumOfComments()
     {
         int number = 0;
@@ -17,6 +24,21 @@ class Video
         }
         return number;
     }
-
-    // SMT add a ToString() method that returns a formatted string that can be printed using Console. See StringBuilder
+    public void AddToList(Comment comment)
+    {
+        comments.Add(comment);
+    }
+    public string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine($"Title: {_title}");
+        sb.AppendLine($"Author: {_author}");
+        sb.AppendLine($"Length: {_length} seconds");
+        sb.AppendLine($"Comments: {comments.Count}");
+        foreach (Comment comment in comments)
+        {
+            sb.AppendLine($"   {comment.ToString()}");
+        }
+        return sb.ToString();
+    }
 }
