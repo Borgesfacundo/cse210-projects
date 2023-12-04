@@ -12,14 +12,9 @@ class Product
         productPrice = price;
         productQuantity = quantity;
     }
-
-    public string Name()
+    public string NameAndId()
     {
-        return productName;
-    }
-    public string Id()
-    {
-        return productId;
+        return $"{productName} - {productId}";
     }
     public double Price()
     {

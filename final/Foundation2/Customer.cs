@@ -9,9 +9,9 @@ class Customer
         address = address1;
     }
 
-    public string CustomerName()
+    public string ToString()
     {
-        return _customerName;
+        return $"{_customerName} - {address.ProductAddress()}";
     }
     public bool LivesInUSA()
     {

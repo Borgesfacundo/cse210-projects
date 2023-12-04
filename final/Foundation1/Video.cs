@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 class Video
 {
+    // SMT should be private and initialized with constructor parameters.
     public string _title;
     public string _author;
     public int _length;
@@ -16,4 +17,6 @@ class Video
         }
         return number;
     }
+
+    // SMT add a ToString() method that returns a formatted string that can be printed using Console. See StringBuilder
 }

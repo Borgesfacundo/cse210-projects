@@ -1,0 +1,146 @@
+diff --git a/final/Foundation1/Comment.cs b/final/Foundation1/Comment.cs
+index 9f40f88..4321124 100644
+--- a/final/Foundation1/Comment.cs
++++ b/final/Foundation1/Comment.cs
+@@ -1,8 +1,10 @@
+ class Comment
+ {
++    // SMT should be private and initialized with constructor parameters.
+     public string _cAuthor;
+     public string _commentText;
+ 
++    // SMT rename this to ToString(). You're not adding a comment here.
+     public string AddComment()
+     {
+         return $"{_cAuthor}, {_commentText}";
+diff --git a/final/Foundation1/Video.cs b/final/Foundation1/Video.cs
+index 33e614d..b869dfe 100644
+--- a/final/Foundation1/Video.cs
++++ b/final/Foundation1/Video.cs
+@@ -3,6 +3,7 @@ using System.ComponentModel;
+ 
+ class Video
+ {
++    // SMT should be private and initialized with constructor parameters.
+     public string _title;
+     public string _author;
+     public int _length;
+@@ -16,4 +17,6 @@ class Video
+         }
+         return number;
+     }
++
++    // SMT add a ToString() method that returns a formatted string that can be printed using Console. See StringBuilder
+ }
+\ No newline at end of file
+diff --git a/final/Foundation2/Address.cs b/final/Foundation2/Address.cs
+index d29c2ec..f7a5a5f 100644
+--- a/final/Foundation2/Address.cs
++++ b/final/Foundation2/Address.cs
+@@ -1,8 +1,10 @@
+ class Address
+ {
++    // SMT Missing _city
+     private string _street;
+     private string _state;
+     private string _country;
++    // SMT remove isUSA since you're calculating the value in IsUSA()
+     private bool isUSA = false;
+ 
+     public Address(string street, string state, string country)
+@@ -13,15 +15,11 @@ class Address
+     }
+     public bool IsUSA()
+     {
+-        if (_country == "USA")
+-        {
+-            return isUSA = true;
+-        }
+-        else 
+-        {
+-            return isUSA = false;
+-        }
++        // SMT can be simplified and handle lower case
++        return _country.ToUpper() == "USA";
+     }
++
++    // SMT take a look at StringBuilder to add new lines
+     public string ProductAddress()
+     {
+         return $"{_street}, {_state}, {_country}";
+diff --git a/final/Foundation2/Customer.cs b/final/Foundation2/Customer.cs
+index 14c5fac..fac8898 100644
+--- a/final/Foundation2/Customer.cs
++++ b/final/Foundation2/Customer.cs
+@@ -9,6 +9,7 @@ class Customer
+         address = address1;
+     }
+ 
++    // SMT replace with ToString that also include the address string
+     public string CustomerName()
+     {
+         return _customerName;
+diff --git a/final/Foundation2/Order.cs b/final/Foundation2/Order.cs
+index 98e44f1..4c7f7a6 100644
+--- a/final/Foundation2/Order.cs
++++ b/final/Foundation2/Order.cs
+@@ -2,8 +2,14 @@ class Order
+ {
+     private List<Product> products = new List<Product>();
+     private Customer customer;
++
++    // SMT remove since you're calculating in a method and returning.
+     private double totalCost;
++
++    // SMT Address is in Customer. Don't declare here.
+     private Address address;
++
++    // SMT remove. Declare local variable in method and return 
+     private string packingLabel;
+ 
+     public Order(Customer c1, Address a1)
+@@ -14,6 +20,8 @@ class Order
+ 
+     public string PackingLabel()
+     {
++        // SMT add and remove member.
++        string packingLabel = "";
+         foreach(Product p1 in products)
+         {
+             packingLabel += $"{p1.Name()} - {p1.Id()}\n";
+@@ -23,11 +31,14 @@ class Order
+ 
+     public string ShippingLabel()
+     {
++        //  SMT have the customer return a string that includes address
+         return $"{customer.CustomerName()} - {address.ProductAddress()}";
+     }
+ 
+     public double TotalPrice()
+     {
++        // SMT add and remove member
++        double totalCost = 0;
+         foreach (Product p in products)
+         {
+             totalCost += p.Price();
+@@ -48,6 +59,8 @@ class Order
+         products.Add(product);
+         return products;
+     }
++
++    // SMT do not return products. That allows calling code to change the state of products.
+     public List<Product> ToStringList()
+     {
+        return products;
+diff --git a/final/Foundation2/Product.cs b/final/Foundation2/Product.cs
+index 9d74005..37ce14f 100644
+--- a/final/Foundation2/Product.cs
++++ b/final/Foundation2/Product.cs
+@@ -13,6 +13,7 @@ class Product
+         productQuantity = quantity;
+     }
+ 
++    // SMT consolidate following methods into a formatted string so the caller doesn't have to.
+     public string Name()
+     {
+         return productName;

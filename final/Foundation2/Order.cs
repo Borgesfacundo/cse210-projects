@@ -2,32 +2,29 @@ class Order
 {
     private List<Product> products = new List<Product>();
     private Customer customer;
-    private double totalCost;
-    private Address address;
-    private string packingLabel;
-
-    public Order(Customer c1, Address a1)
+    public Order(Customer c1)
     {
         customer = c1;
-        address = a1;
     }
 
     public string PackingLabel()
     {
+        string packingLabel = "";
         foreach(Product p1 in products)
         {
-            packingLabel += $"{p1.Name()} - {p1.Id()}\n";
+            packingLabel += $"{p1.NameAndId()}\n";
         }
         return packingLabel;
     }
 
     public string ShippingLabel()
     {
-        return $"{customer.CustomerName()} - {address.ProductAddress()}";
+        return $"{customer.ToString()}";
     }
 
     public double TotalPrice()
     {
+        double totalCost = 0;
         foreach (Product p in products)
         {
             totalCost += p.Price();
@@ -47,9 +44,5 @@ class Order
     {
         products.Add(product);
         return products;
-    }
-    public List<Product> ToStringList()
-    {
-       return products;
     }
 }
