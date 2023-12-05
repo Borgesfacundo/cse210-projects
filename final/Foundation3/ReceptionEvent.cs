@@ -1,9 +1,9 @@
 using System.Text;
 
-class RecpetionEvent : Event
+class ReceptionEvent : Event
 {
     string _email;
-    public RecpetionEvent(string email, string title, string description, string date, string time, Address address) : base(title, description, date, time, address)
+    public ReceptionEvent(string email, string title, string description, string date, string time, Address address) : base(title, description, date, time, address)
     {
         _email = email;
     }

@@ -35,8 +35,7 @@ class Event
         sb.AppendLine($"Description: {_description}");
         sb.AppendLine($"Date: {_date}");
         sb.AppendLine($"Time: {_time}");
-        sb.AppendLine($"Address: {a1.ToString()}");
-
+        sb.Append($"Address: {a1.ToString()}");
         return sb.ToString();
     }
 
@@ -46,7 +45,6 @@ class Event
         sb.AppendLine($"Type of event: {this.GetType().Name}");
         sb.AppendLine($"Title: {_title}");
         sb.AppendLine($"Date: {_date}");
-
         return sb.ToString();
     }
 
