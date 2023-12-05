@@ -14,6 +14,7 @@ class LectureEvent : Event
     {
         StringBuilder sb = new StringBuilder();
         sb.AppendLine($"{FullDetails()}");
+        sb.AppendLine($"Event type: {this.GetType().Name}");
         sb.AppendLine($"Speaker: {_speaker}");
         sb.AppendLine($"Capacity: {_capacity}");
         return sb.ToString();
