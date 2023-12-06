@@ -2,6 +2,11 @@ abstract class Activity
 {
     private string _date;
     private double _length;
+    public Activity(string date, double length)
+    {
+        _date = date;
+        _length = length;
+    }
 
     public abstract double GetDistance();
 
@@ -22,6 +27,11 @@ abstract class Activity
     public double GetLength()
     {
         return _length;
+    }
+
+    public string GetSummary()
+    {
+        return $"{GetDate()} {this.GetType().Name} ({GetLength()}min)- Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile";
     }
 
 }
