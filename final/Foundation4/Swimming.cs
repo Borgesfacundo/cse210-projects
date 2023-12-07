@@ -14,8 +14,8 @@ class Swimming : Activity
     return _laps * _lapLength / 1000;
   }
 
-    public override double GetPace()
-    {
-        return GetLength() / GetDistance();
-    }
+  public override double GetPace()
+  {
+    return GetLength() / GetDistance();
+  }
 }
