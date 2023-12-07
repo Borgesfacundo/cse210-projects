@@ -12,12 +12,12 @@ abstract class Activity
 
     public virtual double GetSpeed()
     {
-        return 60 * GetPace();
+        return (GetDistance() / GetLength()) * 60;
     }
 
     public virtual double GetPace()
     {
-        return 60 * GetSpeed();
+        return 60 / GetSpeed();
     }
 
     public string GetDate()
@@ -31,7 +31,7 @@ abstract class Activity
 
     public string GetSummary()
     {
-        return $"{GetDate()} {this.GetType().Name} ({GetLength()}min)- Distance {GetDistance()} miles, Speed {GetSpeed()} mph, Pace: {GetPace()} min per mile";
+        return $"{GetDate()} {this.GetType().Name} ({GetLength()} min)- Distance {GetDistance()} kilometers, Speed {GetSpeed()} kph, Pace: {GetPace()} min per kilometer";
     }
 
 }
